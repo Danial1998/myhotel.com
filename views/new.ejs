@@ -1,0 +1,20 @@
+<%include ./partials/header%>
+<div class="ui main text container segment">
+	<div class="ui huge header">New Hotel</div>
+	<form class="ui form" action="/hotels" method="POST">
+		<div class="field">
+			<label>Title</label>
+			<input type="text" name="hotel[title]" placeholder="title">
+		</div>
+		<div class="field">
+			<label>Image</label>
+			<input type="text" name="hotel[image]" placeholder="image">
+		</div>
+		<div class="field">
+			<label>Review</label>
+			<textarea name="hotel[body]"></textarea>
+		</div>
+		<input class="ui big black basic button" type="submit">
+	</form>
+</div>
+<%include ./partials/footer%>

@@ -1,0 +1,19 @@
+<%include ./partials/header%>
+<div class="ui main text container segment">
+	<div class="ui huge header "><%=hotel.title%></div>
+	<div>
+		<div class="item"></div>
+		<img class="ui centered rounded image" src="<%= hotel.image%>">
+		<div class="content">
+			<span><%= hotel.created.toDateString() %></span>
+		</div>
+		<div class="description">
+			<p><%= hotel.body %></p>
+		</div>
+		<a class="ui orange inverted button" href="/hotels/<%=hotel._id%>/edit">Edit</a>
+		<form id="delete" action="/hotels/<%=hotel._id%>?_method=DELETE" method="POST">
+			<button class="ui red inverted button">Delete</button>
+		</form>
+	</div>
+</div>
+<%include ./partials/footer%>

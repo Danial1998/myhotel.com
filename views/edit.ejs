@@ -1,0 +1,20 @@
+<%include ./partials/header%>
+<div class="ui main text container segment">
+	<div class="ui huge header">Edit <%=hotel.title%></div>
+	<form class="ui form" action="/hotels/<%= hotel._id%>?_method=PUT" method="POST">
+		<div class="field">
+			<label>Title</label>
+			<input type="text" name="hotel[title]" value="<%=hotel.title%>">
+		</div>
+		<div class="field">
+			<label>Image</label>
+			<input type="text" name="hotel[image]" value="<%=hotel.image%>">
+		</div>
+		<div class="field">
+			<label>Review</label>
+			<textarea name="hotel[body]"><%=hotel.body%></textarea>
+		</div>
+		<input class="ui big black basic button" type="submit">
+	</form>
+</div>
+<%include ./partials/footer%>
